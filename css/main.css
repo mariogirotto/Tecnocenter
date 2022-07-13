@@ -1,0 +1,55 @@
+body {
+  padding: 0px;
+}
+
+header{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  align-items: center;
+  padding: 20px;   
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+}
+
+header > h1{
+    text-align: right;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;  
+
+}
+main {
+  padding-top: 100px;
+}
+
+button{
+  margin: 1px;
+}
+
+.box{
+  flex: 1 1 auto;
+}
+
+.title{
+  flex: 1 1 auto;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.socials{
+    color: white;
+    margin:2px;
+}
