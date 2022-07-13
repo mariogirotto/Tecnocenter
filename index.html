@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tecnocenter</title>                        
+    <link rel="shortcut icon" href="./Imagenes/icono.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    
+    <script src="https://kit.fontawesome.com/3a6a7a1eda.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+</head>
+
+<body>
+    <header>
+        <nav class="box">
+            <a href="./index.html"><button type="button" class="btn btn-primary">Home</button></a>
+            <a href="./indexadmin.html"><button type="button" class="btn btn-primary">Productos</button></a>
+            <a href="./contacto.html"><button type="button" class="btn btn-primary">Contacto</button></a>
+            <a href="./sucursales.html"><button type="button" class="btn btn-primary">Sucursales</button></a>           
+        </nav>
+        <h1 class="title">Tecnocenter</h1>
+    </header>
+    <main>
+    <h1>Novedades:</h1>
+    <div id="app">        
+        <div class="d-flex flex-wrap justify-content-center ">
+            <div v-for="producto in productos" class="padding: 5px card m-3" style="width: 250px;">
+                <div class="card-body">
+                    <h4 style="font-size: medium;" class="card-title"> {{producto.nombre}} </h4>
+                </div>                
+                <img :src="producto.foto" class="card-img-top" alt="Card image" style="width:100%">
+                <div class="card-body">                    
+                    <!--<p class="card-text">ID: {{producto.id}}</p>-->
+                    <p class="card-text">Precio: ${{producto.precio}}</p>
+                    <p class="card-text">Categoria: {{producto.categoria}} </p>
+                    <p class="card-text">Disponibles: {{producto.stock}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer></footer>
+    <script src="./js/headerfooter.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
