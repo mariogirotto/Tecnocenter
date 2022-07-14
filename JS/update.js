@@ -6,17 +6,18 @@ for (let i = 0; i < args.length; ++i) {
 }
 console.log(args)
 document.getElementById("txtId").value = parts[0][1]
-document.getElementById("txtNombre").value = parts[1][1]
+document.getElementById("txtNombre").value = decodeURI(parts[1][1]) // muestra el nombre decodificado en el campo de texto
 document.getElementById("txtPrecio").value = parts[2][1]
 document.getElementById("txtStock").value = parts[3][1]
-document.getElementById("txtFoto").value = parts[4][1]
+document.getElementById("txtCategoria").value = decodeURI(parts[4][1])
+document.getElementById("txtFoto").value = parts[5][1]
  
 function modificar() {
     let id = document.getElementById("txtId").value
     let n = document.getElementById("txtNombre").value
     let p = parseFloat(document.getElementById("txtPrecio").value)
     let s = parseInt(document.getElementById("txtStock").value)
-    let o = document.getElementById("txtFoto").value
+    let o = "img/"+document.getElementById("txtFoto").value.substring(11)
     let u = document.getElementById("txtCategoria").value
 
     let producto = {

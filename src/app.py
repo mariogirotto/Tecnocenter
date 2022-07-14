@@ -1,6 +1,7 @@
-from flask import Flask ,jsonify,request
+from flask import Flask ,jsonify,request, render_template
 from flask_cors import CORS
- 
+from werkzeug.utils import secure_filename 
+
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
  
@@ -81,12 +82,19 @@ def update_producto(id):
     db.session.commit()
     return producto_schema.jsonify(producto)
 
-@app.route('/producto/<id>',methods=['DELETE'])
+@app.route('/productos/<id>',methods=['DELETE'])
 def delete_producto(id):
     producto=Producto.query.get(id)
     db.session.delete(producto)
     db.session.commit()
     return producto_schema.jsonify(producto)
+
+@app.route('/uploader', methods = ['GET', 'POST'])
+def upload_file():
+   if request.method == 'POST':
+      f = request.files['txtFoto']
+      f.save("img/"+secure_filename(f.filename))
+      return 'file uploaded successfully'
 
 # programa principal
 if __name__=='__main__':  

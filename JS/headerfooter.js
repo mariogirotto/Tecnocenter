@@ -26,6 +26,7 @@ var footerCodeBlock = '<nav>'+
                         '<a class="socials" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter-square fa-2x"></i></a>&emsp;'+
                         '<a class="socials" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram-square fa-2x"></i></a>'+
                         '</nav>'+
+                        '<div class = "break"></div>'+
                         '<p>Derechos reservados 2022</p>';
 
 // Inserting the code block to wrapper element

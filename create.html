@@ -13,7 +13,7 @@
     <main style="margin: 1% 20%;">
         <div class="container">
             <h1>Alta Producto</h1>    
-            <form>      
+            <form enctype = "multipart/form-data" action = "http://localhost:5000/uploader" method = "post">      
             <div class="mb-3">
                     <label for="txtNombre">Nombre</label>
                     <input type="text" class="form-control" name="txtNombre" id="txtNombre"><br>
@@ -32,9 +32,10 @@
                 </div>
                 <div class="mb-3">
                     <label for="txtFoto">Foto</label>
-                    <input type="file" class="form-control" name="txtFoto" id="txtFoto"> <br>
+                    <input type="file" class="form-control" name="txtFoto" id="txtFoto" accept=".jpg, .jpeg, .png"> <br>
                 </div>
-                <button type="button" class="btn btn-success" onclick="guardar()">Grabar</button>
+                <!--<button type="submit">Subir</button>-->
+                <button type="submit" class="btn btn-success" onclick="guardar()">Grabar</button>
                </form>
             <br>
             <a href="index.html" class="btn btn-warning">Home</a>

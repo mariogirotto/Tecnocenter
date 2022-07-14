@@ -3,7 +3,7 @@ function guardar() {
     let n = document.getElementById("txtNombre").value
     let p = parseFloat(document.getElementById("txtPrecio").value)
     let s = parseInt(document.getElementById("txtStock").value)
-    let o = document.getElementById("txtFoto").value
+    let o = "img/"+document.getElementById("txtFoto").value.substring(11)
     let u = document.getElementById("txtCategoria").value
  
     let producto = {

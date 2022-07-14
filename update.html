@@ -13,7 +13,7 @@
     <main style="margin: 1% 20%;">
         <div class="container">
             <h1>Modificacion Productos</h1>
-            <form >
+            <form enctype = "multipart/form-data" action = "http://localhost:5000/uploader" method = "post">
                 <div class="mb-3">
                     <label for="txtId">Id</label>
                     <input type="text" class="form-control" name="txtId" id="txtId" disabled  ><br>
@@ -38,7 +38,7 @@
                     <label for="txtFoto">Foto:</label>
                     <input type="file" class="form-control" name="txtFoto" id="txtFoto"> <br>
                 </div>
-                <button  type="button"  class="btn btn-success" onclick="modificar()">Grabar</button>
+                <button  type="submit"  class="btn btn-success" onclick="modificar()">Grabar</button>
             </form>
             <br>
             <a href="index.html" class="btn btn-warning">Home</a>
